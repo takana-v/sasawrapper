@@ -39,12 +39,30 @@ def output_to_wav_wrapper(args: argparse.Namespace):
         raise RuntimeError("出力に失敗しました。")
 
 
-def get_text_duration_wrapper(args: argparse.Namespace) -> float:
+def text_duration_wrapper(args: argparse.Namespace) -> float:
     emotion = {}
     for emotion_list in args.emotion:
         emotion[emotion_list[0]] = int(emotion_list[1])
     print(
         sasawrapper.get_text_duration(
+            text=args.text,
+            volume=args.volume,
+            speed=args.speed,
+            tone=args.tone,
+            tone_scale=args.tone_scale,
+            alpha=args.alpha,
+            cast=args.cast,
+            emotion=emotion,
+        )
+    )
+
+
+def monophone_label_wrapper(args: argparse.Namespace):
+    emotion = {}
+    for emotion_list in args.emotion:
+        emotion[emotion_list[0]] = int(emotion_list[1])
+    print(
+        sasawrapper.get_monophone_label(
             text=args.text,
             volume=args.volume,
             speed=args.speed,
@@ -163,7 +181,38 @@ if __name__ == "__main__":
         action="append",
         metavar=("EMOTION", "EMOTION_VALUE"),
     )
-    parser_text_duration.set_defaults(func=get_text_duration_wrapper)
+    parser_text_duration.set_defaults(func=text_duration_wrapper)
+
+    parser_monophone_label = subparser.add_parser("monophone_label")
+    parser_monophone_label.add_argument("text", type=str, help="読み上げるセリフ")
+    parser_monophone_label.add_argument(
+        "--volume", type=int, help="音の大きさ（0～100）", default=50
+    )
+    parser_monophone_label.add_argument(
+        "--speed", type=int, help="音の高さ（0～100）", default=50
+    )
+    parser_monophone_label.add_argument(
+        "--tone", type=int, help="音の高さ（0～100）", default=50
+    )
+    parser_monophone_label.add_argument(
+        "--tone_scale", type=int, help="抑揚（0～100）", default=50
+    )
+    parser_monophone_label.add_argument(
+        "--alpha", type=int, help="声質（0～100）", default=50
+    )
+    parser_monophone_label.add_argument(
+        "--cast", type=str, help="読み上げるキャスト", default=None
+    )
+    parser_monophone_label.add_argument(
+        "--emotion",
+        type=str,
+        help="感情名、感情の値",
+        default=[],
+        nargs=2,
+        action="append",
+        metavar=("EMOTION", "EMOTION_VALUE"),
+    )
+    parser_monophone_label.set_defaults(func=monophone_label_wrapper)
 
     parser_start_cevioai = subparser.add_parser("start_cevioai")
     parser_start_cevioai.add_argument(
