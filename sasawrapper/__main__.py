@@ -68,15 +68,15 @@ def close_cevioai_wrapper(args: argparse.Namespace):
 
 
 def cast_info_wrapper(args: argparse.Namespace):
-    print(sasawrapper.cast_info())
+    print(sasawrapper.get_cast_info())
 
 
 def cevioai_version_wrapper(args: argparse.Namespace):
-    print(sasawrapper.cevioai_version())
+    print(sasawrapper.get_cevioai_version())
 
 
 def interface_version_wrapper(args: argparse.Namespace):
-    print(sasawrapper.interface_version())
+    print(sasawrapper.get_interface_version())
 
 
 def self_version(args: argparse.Namespace):

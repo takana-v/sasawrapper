@@ -23,7 +23,7 @@ def _set_values(
     emotion: Optional[Dict[str, int]],
 ):
     _check_cevioai_status()
-    _cast_info = cast_info()
+    _cast_info = get_cast_info()
     if cast is None:
         cast = list(_cast_info.keys())[0]
     if cast not in _cast_info:
@@ -76,7 +76,7 @@ def close_cevioai():
     _service_control.close_host(0)
 
 
-def cevioai_version() -> str:
+def get_cevioai_version() -> str:
     """
     CeVIO AIのバージョンを取得します。
 
@@ -89,7 +89,7 @@ def cevioai_version() -> str:
     return _service_control.host_version
 
 
-def interface_version() -> str:
+def get_interface_version() -> str:
     """
     CeVIO AI 外部連携インターフェイスのバージョンを取得します。
 
@@ -102,7 +102,7 @@ def interface_version() -> str:
     return _service_control.interface_version
 
 
-def cast_info() -> Dict[str, List[str]]:
+def get_cast_info() -> Dict[str, List[str]]:
     """
     キャストの情報を取得します。
 
@@ -239,7 +239,7 @@ def output_to_wav(
     return _talker.output_wave_to_file(text, path)
 
 
-def text_duration(
+def get_text_duration(
     text: str,
     volume: int = 50,
     speed: int = 50,
@@ -291,7 +291,7 @@ def text_duration(
     return _talker.get_text_duration(text)
 
 
-def phonemes_data(
+def get_phonemes_data(
     text: str,
     volume: int = 50,
     speed: int = 50,
@@ -300,7 +300,7 @@ def phonemes_data(
     alpha: int = 50,
     cast: Optional[str] = None,
     emotion: Optional[Dict[str, int]] = None,
-) -> List[Tuple[float,float,str]]:
+) -> List[Tuple[float, float, str]]:
     """
     音素データの配列を取得します。
 
@@ -344,11 +344,13 @@ def phonemes_data(
     phonemes_data = []
     for i in range(phoneme_data_array.length):
         phoneme_data = phoneme_data_array.at(i)
-        phonemes_data.append((phoneme_data.start_time, phoneme_data.end_time, phoneme_data.phoneme))
+        phonemes_data.append(
+            (phoneme_data.start_time, phoneme_data.end_time, phoneme_data.phoneme)
+        )
     return phonemes_data
 
 
-def monophone_label(
+def get_monophone_label(
     text: str,
     volume: int = 50,
     speed: int = 50,
@@ -385,11 +387,11 @@ def monophone_label(
 
     Returns
     -------
-    str
+    monophone_label : str
         モノフォンラベルの文字列
     """
-    ret = ""
-    for t in phonemes_data(
+    monophone_label = ""
+    for t in get_phonemes_data(
         text=text,
         volume=volume,
         speed=speed,
@@ -400,7 +402,9 @@ def monophone_label(
         emotion=emotion,
     ):
         start_time, end_time, phoneme = t
-        start_time *= 10000000 
+        start_time *= 10000000
         end_time *= 10000000
-        ret += " ".join([str(int(start_time)),str(int(end_time)),phoneme]) + "\n"
-    return ret.rstrip("\n")
+        monophone_label += (
+            " ".join([str(int(start_time)), str(int(end_time)), phoneme]) + "\n"
+        )
+    return monophone_label.rstrip("\n")
