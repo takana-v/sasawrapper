@@ -8,6 +8,8 @@ from .sasawrapper import (
     speak,
     start_cevioai,
     text_duration,
+    phonemes_data,
+    monophone_label,
 )
 from .service_control import ServiceControl2V40
 from .talker import Talker2V40
@@ -23,4 +25,6 @@ __all__ = [
     "speak",
     "text_duration",
     "output_to_wav",
+    "phonemes_data",
+    "monophone_label",
 ]

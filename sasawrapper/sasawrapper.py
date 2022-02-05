@@ -1,4 +1,4 @@
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 from .service_control import ServiceControl2V40
 from .talker import Talker2V40
@@ -289,3 +289,118 @@ def text_duration(
         emotion=emotion,
     )
     return _talker.get_text_duration(text)
+
+
+def phonemes_data(
+    text: str,
+    volume: int = 50,
+    speed: int = 50,
+    tone: int = 50,
+    tone_scale: int = 50,
+    alpha: int = 50,
+    cast: Optional[str] = None,
+    emotion: Optional[Dict[str, int]] = None,
+) -> List[Tuple[float,float,str]]:
+    """
+    音素データの配列を取得します。
+
+    Parameters
+    ----------
+    text : str
+        音素データの配列を取得するテキスト（セリフ）
+    volume : int, optional, default=50
+        音の大きさ（0～100）
+    speed : int, optional, default=50
+        話す速さ（0～100）
+    tone : int, optional, default=50
+        音の高さ（0～100）
+    tone_scale : int, optional, default=50
+        抑揚（0～100）
+    alpha : int, optional, default=50
+        声質（0～100）
+    cast : str, optional, default=None
+        読み上げるキャスト
+        Noneの場合、available_castsの先頭が選ばれます。
+    emotion : dict, optional, default=None
+        キーが感情名、値が感情の値である辞書
+        指定されていない感情は0にセットされます。
+
+    Returns
+    -------
+    phonemes_data : list
+        開始時間、終了時間、音素のタプルのリスト
+    """
+    _check_cevioai_status()
+    _set_values(
+        volume=volume,
+        speed=speed,
+        tone=tone,
+        tone_scale=tone_scale,
+        alpha=alpha,
+        cast=cast,
+        emotion=emotion,
+    )
+    phoneme_data_array = _talker.get_phonemes(text)
+    phonemes_data = []
+    for i in range(phoneme_data_array.length):
+        phoneme_data = phoneme_data_array.at(i)
+        phonemes_data.append((phoneme_data.start_time, phoneme_data.end_time, phoneme_data.phoneme))
+    return phonemes_data
+
+
+def monophone_label(
+    text: str,
+    volume: int = 50,
+    speed: int = 50,
+    tone: int = 50,
+    tone_scale: int = 50,
+    alpha: int = 50,
+    cast: Optional[str] = None,
+    emotion: Optional[Dict[str, int]] = None,
+):
+    """
+    モノフォンラベルを取得します。
+    リップシンク用ファイル（.lab）と同じフォーマットです。
+
+    Parameters
+    ----------
+    text : str
+        音素データの配列を取得するテキスト（セリフ）
+    volume : int, optional, default=50
+        音の大きさ（0～100）
+    speed : int, optional, default=50
+        話す速さ（0～100）
+    tone : int, optional, default=50
+        音の高さ（0～100）
+    tone_scale : int, optional, default=50
+        抑揚（0～100）
+    alpha : int, optional, default=50
+        声質（0～100）
+    cast : str, optional, default=None
+        読み上げるキャスト
+        Noneの場合、available_castsの先頭が選ばれます。
+    emotion : dict, optional, default=None
+        キーが感情名、値が感情の値である辞書
+        指定されていない感情は0にセットされます。
+
+    Returns
+    -------
+    str
+        モノフォンラベルの文字列
+    """
+    ret = ""
+    for t in phonemes_data(
+        text=text,
+        volume=volume,
+        speed=speed,
+        tone=tone,
+        tone_scale=tone_scale,
+        alpha=alpha,
+        cast=cast,
+        emotion=emotion,
+    ):
+        start_time, end_time, phoneme = t
+        start_time *= 10000000 
+        end_time *= 10000000
+        ret += " ".join([str(int(start_time)),str(int(end_time)),phoneme]) + "\n"
+    return ret.rstrip("\n")
