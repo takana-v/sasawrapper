@@ -55,7 +55,7 @@ class Talker2V40:
     @property
     def components(self) -> "TalkerComponentArray2":
         """現在のキャストの感情パラメータマップを取得します。"""
-        return self.talker2.Components
+        return TalkerComponentArray2(self.talker2.Components)
 
     @property
     def cast(self) -> str:
@@ -69,7 +69,7 @@ class Talker2V40:
     @property
     def available_casts(self) -> "StringArray2":
         """利用可能なキャスト名を取得します。"""
-        return self.talker2.AvailableCasts
+        return StringArray2(self.talker2.AvailableCasts)
 
     def speak(self, text: str) -> "SpeakingState2":
         """
@@ -85,7 +85,7 @@ class Talker2V40:
         SpeakingState2
             再生状態を表すオブジェクト
         """
-        return self.talker2.Speak(text)
+        return SpeakingState2(self.talker2.Speak(text))
 
     def stop(self) -> bool:
         """
@@ -128,7 +128,7 @@ class Talker2V40:
         PhonemeDataArray2
             音素データの配列を表すオブジェクト。
         """
-        return self.talker2.GetPhonemes(text)
+        return PhonemeDataArray2(self.talker2.GetPhonemes(text))
 
     def output_wave_to_file(self, text: str, path: str) -> bool:
         """
@@ -317,7 +317,7 @@ class PhonemeDataArray2:
         PhonemeData2
             音素データの単位オブジェクト。
         """
-        return self.phoneme_data_array2.At(index)
+        return PhonemeData2(self.phoneme_data_array2.At(index))
 
     def duplicate(self) -> "PhonemeDataArray2":
         """
