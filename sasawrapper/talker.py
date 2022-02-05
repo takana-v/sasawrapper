@@ -200,6 +200,7 @@ class TalkerComponentArray2:
         TalkerComponent2
             感情パラメータの単位オブジェクト。
         """
+        return TalkerComponent2(self.talker_component_array2.ByName(name))
 
     def duplicate(self) -> "TalkerComponentArray2":
         """
