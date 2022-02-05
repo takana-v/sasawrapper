@@ -201,7 +201,7 @@ def output_to_wav(
     Parameters
     ----------
     text : str
-        読み上げるテキスト（セリフ）]
+        読み上げるテキスト（セリフ）
     path : str
         WAVファイルの保存先のパス
     volume : int, optional, default=50
@@ -255,9 +255,7 @@ def text_duration(
     Parameters
     ----------
     text : str
-        読み上げるテキスト（セリフ）]
-    path : str
-        WAVファイルの保存先のパス
+        読み上げるテキスト（セリフ）
     volume : int, optional, default=50
         音の大きさ（0～100）
     speed : int, optional, default=50
