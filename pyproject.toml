@@ -13,5 +13,9 @@ enable_mypy = false
 mypy_preset = "strict"
 line_length = 88
 py_version = "py38"
+
+[tool.pysen.lint.source]
+excludes = ["docs/"]
+
 [[tool.pysen.lint.mypy_targets]]
 paths = ["."]
