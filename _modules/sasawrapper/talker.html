@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sasawrapper.talker &mdash; sasawrapper  ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> sasawrapper
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../sasawrapper.html">sasawrapper package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">sasawrapper</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">モジュールコード</a> &raquo;</li>
+      <li>sasawrapper.talker</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>sasawrapper.talker のソースコード</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">win32com.client</span>
+
+
+<div class="viewcode-block" id="Talker2V40"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.Talker2V40">[ドキュメント]</a><span class="k">class</span> <span class="nc">Talker2V40</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;トーク機能を提供します。&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span> <span class="o">=</span> <span class="n">win32com</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">Dispatch</span><span class="p">(</span><span class="s2">&quot;CeVIO.Talk.RemoteService2.Talker2V40&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;音の大きさ（0～100）を取得または設定します。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">Volume</span>
+
+    <span class="nd">@volume</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">Volume</span> <span class="o">=</span> <span class="n">val</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">speed</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;話す速さ（0～100）を取得または設定します。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">Speed</span>
+
+    <span class="nd">@speed</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">speed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">Speed</span> <span class="o">=</span> <span class="n">val</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">tone</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;音の高さ（0～100）を取得または設定します。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">Tone</span>
+
+    <span class="nd">@tone</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">tone</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">Tone</span> <span class="o">=</span> <span class="n">val</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">tone_scale</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;抑揚（0～100）を取得または設定します。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">ToneScale</span>
+
+    <span class="nd">@tone_scale</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">tone_scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">ToneScale</span> <span class="o">=</span> <span class="n">val</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">alpha</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;声質（0～100）を取得または設定します。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">Alpha</span>
+
+    <span class="nd">@alpha</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">alpha</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">Alpha</span> <span class="o">=</span> <span class="n">val</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">components</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;TalkerComponentArray2&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;現在のキャストの感情パラメータマップを取得します。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">Components</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">cast</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;キャストを取得または設定します。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">Cast</span>
+
+    <span class="nd">@cast</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">cast</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">Cast</span> <span class="o">=</span> <span class="n">val</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">available_casts</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;StringArray2&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;利用可能なキャスト名を取得します。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">AvailableCasts</span>
+
+<div class="viewcode-block" id="Talker2V40.speak"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.Talker2V40.speak">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;SpeakingState2&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        指定したセリフの再生を開始します。</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        text : str</span>
+<span class="sd">            読み上げるセリフ</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        SpeakingState2</span>
+<span class="sd">            再生状態を表すオブジェクト</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">Speak</span><span class="p">(</span><span class="n">text</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Talker2V40.stop"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.Talker2V40.stop">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        再生を停止します。</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            停止に成功したかどうか</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">Stop</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Talker2V40.get_text_duration"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.Talker2V40.get_text_duration">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">get_text_duration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        指定したセリフの長さを取得します。</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        text : str</span>
+<span class="sd">            長さを取得するセリフ。</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        float</span>
+<span class="sd">            セリフの長さ。単位は秒です。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">GetTextDuration</span><span class="p">(</span><span class="n">text</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Talker2V40.get_phonemes"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.Talker2V40.get_phonemes">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">get_phonemes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;PhonemeDataArray2&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        指定したデータの音素単位のデータを取得します。</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        text : str</span>
+<span class="sd">            データを取得するセリフ。</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        PhonemeDataArray2</span>
+<span class="sd">            音素データの配列を表すオブジェクト。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">GetPhonemes</span><span class="p">(</span><span class="n">text</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Talker2V40.output_wave_to_file"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.Talker2V40.output_wave_to_file">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">output_wave_to_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        指定したセリフをWAVファイルとして出力します。</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        text : str</span>
+<span class="sd">            出力するセリフ。</span>
+<span class="sd">        path : str</span>
+<span class="sd">            WAVファイルの出力先パス。</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            出力に成功したかどうか</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        出力形式はサンプリングレート48kHz、ビットレート16bit、モノラルです。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker2</span><span class="o">.</span><span class="n">OutputWaveToFile</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="TalkerComponentArray2"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.TalkerComponentArray2">[ドキュメント]</a><span class="k">class</span> <span class="nc">TalkerComponentArray2</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;感情パラメータマップを表すオブジェクト。&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">com_obj</span><span class="p">:</span> <span class="n">win32com</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">CDispatch</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        com_obj : win32com.client.CDispatch</span>
+<span class="sd">            感情パラメータマップを表すCOMオブジェクト。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">talker_component_array2</span> <span class="o">=</span> <span class="n">com_obj</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">length</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;配列の要素数を取得します。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker_component_array2</span><span class="o">.</span><span class="n">Length</span>
+
+<div class="viewcode-block" id="TalkerComponentArray2.at"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.TalkerComponentArray2.at">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;TalkerComponent2&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        指定したインデックスの要素を取得します。</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        index : int</span>
+<span class="sd">            取得する要素のインデックス。</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        TalkerComponent2</span>
+<span class="sd">            感情パラメータの単位オブジェクト。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">TalkerComponent2</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">talker_component_array2</span><span class="o">.</span><span class="n">At</span><span class="p">(</span><span class="n">index</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="TalkerComponentArray2.by_name"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.TalkerComponentArray2.by_name">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">by_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;TalkerComponent2&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        指定した名前の要素を取得します。</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name : str</span>
+<span class="sd">            取得する要素の名前。</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        TalkerComponent2</span>
+<span class="sd">            感情パラメータの単位オブジェクト。</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="TalkerComponentArray2.duplicate"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.TalkerComponentArray2.duplicate">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">duplicate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;TalkerComponentArray2&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        配列を複製します。</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        TalkerComponentArray2</span>
+<span class="sd">            複製された配列。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">TalkerComponentArray2</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">talker_component_array2</span><span class="o">.</span><span class="n">Duplicate</span><span class="p">())</span></div></div>
+
+
+<div class="viewcode-block" id="TalkerComponent2"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.TalkerComponent2">[ドキュメント]</a><span class="k">class</span> <span class="nc">TalkerComponent2</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;感情パラメータの単位オブジェクト。&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">com_obj</span><span class="p">:</span> <span class="n">win32com</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">CDispatch</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        com_obj : win32com.client.CDispatch</span>
+<span class="sd">            感情パラメータの単位を表すCOMオブジェクト。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">talker_component2</span> <span class="o">=</span> <span class="n">com_obj</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;感情の識別子を取得します。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker_component2</span><span class="o">.</span><span class="n">Id</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;感情の名前を取得します。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker_component2</span><span class="o">.</span><span class="n">Name</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">value</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;感情の値（0～100）を取得または設定します。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">talker_component2</span><span class="o">.</span><span class="n">Value</span>
+
+    <span class="nd">@value</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">talker_component2</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">val</span></div>
+
+
+<div class="viewcode-block" id="SpeakingState2"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.SpeakingState2">[ドキュメント]</a><span class="k">class</span> <span class="nc">SpeakingState2</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;再生状態を表すオブジェクト&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">com_obj</span><span class="p">:</span> <span class="n">win32com</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">CDispatch</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        com_obj : win32com.client.CDispatch</span>
+<span class="sd">            再生状態を表すCOMオブジェクト。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">speaking_state2</span> <span class="o">=</span> <span class="n">com_obj</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_completed</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;再生が完了したかどうかを取得します。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">speaking_state2</span><span class="o">.</span><span class="n">IsCompleted</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_succeeded</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;再生が成功したかどうかを取得します。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">speaking_state2</span><span class="o">.</span><span class="n">IsSucceeded</span>
+
+<div class="viewcode-block" id="SpeakingState2.wait"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.SpeakingState2.wait">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">wait</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        再生終了を待ちます。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">speaking_state2</span><span class="o">.</span><span class="n">Wait</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="SpeakingState2.wait_2"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.SpeakingState2.wait_2">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">wait_2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        再生終了を待ちます。</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        timeout : float</span>
+<span class="sd">            最大待機時間。単位は秒です。</span>
+<span class="sd">            0未満にすると無制限に待機します。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">speaking_state2</span><span class="o">.</span><span class="n">Wait_2</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="PhonemeDataArray2"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.PhonemeDataArray2">[ドキュメント]</a><span class="k">class</span> <span class="nc">PhonemeDataArray2</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;音素データの配列を表すオブジェクト。&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">com_obj</span><span class="p">:</span> <span class="n">win32com</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">CDispatch</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        com_obj : win32com.client.CDispatch</span>
+<span class="sd">            音素データの配列を表すCOMオブジェクト。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">phoneme_data_array2</span> <span class="o">=</span> <span class="n">com_obj</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">length</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;配列の要素数を取得します。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">phoneme_data_array2</span><span class="o">.</span><span class="n">Length</span>
+
+<div class="viewcode-block" id="PhonemeDataArray2.at"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.PhonemeDataArray2.at">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;PhonemeData2&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        指定したインデックスの要素を取得します。</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        index : int</span>
+<span class="sd">            取得する要素のインデックス</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        PhonemeData2</span>
+<span class="sd">            音素データの単位オブジェクト。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">phoneme_data_array2</span><span class="o">.</span><span class="n">At</span><span class="p">(</span><span class="n">index</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PhonemeDataArray2.duplicate"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.PhonemeDataArray2.duplicate">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">duplicate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;PhonemeDataArray2&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        配列を複製します。</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        PhonemeDataArray2</span>
+<span class="sd">            複製された配列。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">phoneme_data_array2</span><span class="o">.</span><span class="n">Duplicate</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="PhonemeData2"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.PhonemeData2">[ドキュメント]</a><span class="k">class</span> <span class="nc">PhonemeData2</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;音素データの単位オブジェクト。&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">com_obj</span><span class="p">:</span> <span class="n">win32com</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">CDispatch</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        com_obj : win32com.client.CDispatch</span>
+<span class="sd">            音素データの単位を表すCOMオブジェクト。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">phoneme_data2</span> <span class="o">=</span> <span class="n">com_obj</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">phoneme</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;音素を取得します。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">phoneme_data2</span><span class="o">.</span><span class="n">Phoneme</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">start_time</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;開始時間を取得します。単位は秒です。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">phoneme_data2</span><span class="o">.</span><span class="n">StartTime</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">end_time</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;終了時間を取得します。単位は秒です。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">phoneme_data2</span><span class="o">.</span><span class="n">EndTime</span></div>
+
+
+<div class="viewcode-block" id="StringArray2"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.StringArray2">[ドキュメント]</a><span class="k">class</span> <span class="nc">StringArray2</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;文字列の配列を表すオブジェクト。&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">com_obj</span><span class="p">:</span> <span class="n">win32com</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">CDispatch</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        com_obj : win32com.client.CDispatch</span>
+<span class="sd">            音素データの配列を表すCOMオブジェクト。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">string_array2</span> <span class="o">=</span> <span class="n">com_obj</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">length</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;配列の要素数を取得します。&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">string_array2</span><span class="o">.</span><span class="n">Length</span>
+
+<div class="viewcode-block" id="StringArray2.at"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.StringArray2.at">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        指定したインデックスの要素を取得します。</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        index : int</span>
+<span class="sd">            取得する要素のインデックス</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+<span class="sd">            指定したインデックスの要素</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">string_array2</span><span class="o">.</span><span class="n">At</span><span class="p">(</span><span class="n">index</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="StringArray2.duplicate"><a class="viewcode-back" href="../../sasawrapper.talker.html#sasawrapper.StringArray2.duplicate">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">duplicate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;StringArray2&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        配列を複製します。</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        StringArray2</span>
+<span class="sd">            複製された配列。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">string_array2</span><span class="o">.</span><span class="n">Duplicate</span><span class="p">()</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, takana-v.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

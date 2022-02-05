@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sasawrapper.talker module &mdash; sasawrapper  ドキュメント</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="prev" title="sasawrapper.service_control module" href="sasawrapper.service_control.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> sasawrapper
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="sasawrapper.html">sasawrapper package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="sasawrapper.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sasawrapper.sasawrapper.html">sasawrapper.sasawrapper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sasawrapper.service_control.html">sasawrapper.service_control module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">sasawrapper.talker module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sasawrapper.html#module-sasawrapper">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sasawrapper</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="sasawrapper.html">sasawrapper package</a> &raquo;</li>
+      <li>sasawrapper.talker module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/sasawrapper.talker.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-sasawrapper.talker">
+<span id="sasawrapper-talker-module"></span><h1>sasawrapper.talker module<a class="headerlink" href="#module-sasawrapper.talker" title="このヘッドラインへのパーマリンク"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="sasawrapper.talker.PhonemeData2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sasawrapper.talker.</span></span><span class="sig-name descname"><span class="pre">PhonemeData2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">com_obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">win32com.client.CDispatch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sasawrapper/talker.html#PhonemeData2"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.PhonemeData2" title="この定義へのパーマリンク"></a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>音素データの単位オブジェクト。</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.PhonemeData2.end_time">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">end_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#sasawrapper.talker.PhonemeData2.end_time" title="この定義へのパーマリンク"></a></dt>
+<dd><p>終了時間を取得します。単位は秒です。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.PhonemeData2.phoneme">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">phoneme</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sasawrapper.talker.PhonemeData2.phoneme" title="この定義へのパーマリンク"></a></dt>
+<dd><p>音素を取得します。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.PhonemeData2.start_time">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">start_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#sasawrapper.talker.PhonemeData2.start_time" title="この定義へのパーマリンク"></a></dt>
+<dd><p>開始時間を取得します。単位は秒です。</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sasawrapper.talker.PhonemeDataArray2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sasawrapper.talker.</span></span><span class="sig-name descname"><span class="pre">PhonemeDataArray2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">com_obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">win32com.client.CDispatch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sasawrapper/talker.html#PhonemeDataArray2"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.PhonemeDataArray2" title="この定義へのパーマリンク"></a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>音素データの配列を表すオブジェクト。</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.talker.PhonemeDataArray2.at">
+<span class="sig-name descname"><span class="pre">at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#sasawrapper.talker.PhonemeData2" title="sasawrapper.talker.PhonemeData2"><span class="pre">sasawrapper.talker.PhonemeData2</span></a></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#PhonemeDataArray2.at"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.PhonemeDataArray2.at" title="この定義へのパーマリンク"></a></dt>
+<dd><p>指定したインデックスの要素を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) -- 取得する要素のインデックス</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>音素データの単位オブジェクト。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#sasawrapper.talker.PhonemeData2" title="sasawrapper.talker.PhonemeData2">PhonemeData2</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.talker.PhonemeDataArray2.duplicate">
+<span class="sig-name descname"><span class="pre">duplicate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#sasawrapper.talker.PhonemeDataArray2" title="sasawrapper.talker.PhonemeDataArray2"><span class="pre">sasawrapper.talker.PhonemeDataArray2</span></a></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#PhonemeDataArray2.duplicate"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.PhonemeDataArray2.duplicate" title="この定義へのパーマリンク"></a></dt>
+<dd><p>配列を複製します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>複製された配列。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#sasawrapper.talker.PhonemeDataArray2" title="sasawrapper.talker.PhonemeDataArray2">PhonemeDataArray2</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.PhonemeDataArray2.length">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">length</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sasawrapper.talker.PhonemeDataArray2.length" title="この定義へのパーマリンク"></a></dt>
+<dd><p>配列の要素数を取得します。</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sasawrapper.talker.SpeakingState2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sasawrapper.talker.</span></span><span class="sig-name descname"><span class="pre">SpeakingState2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">com_obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">win32com.client.CDispatch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sasawrapper/talker.html#SpeakingState2"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.SpeakingState2" title="この定義へのパーマリンク"></a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>再生状態を表すオブジェクト</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.SpeakingState2.is_completed">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_completed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#sasawrapper.talker.SpeakingState2.is_completed" title="この定義へのパーマリンク"></a></dt>
+<dd><p>再生が完了したかどうかを取得します。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.SpeakingState2.is_succeeded">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_succeeded</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#sasawrapper.talker.SpeakingState2.is_succeeded" title="この定義へのパーマリンク"></a></dt>
+<dd><p>再生が成功したかどうかを取得します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.talker.SpeakingState2.wait">
+<span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#SpeakingState2.wait"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.SpeakingState2.wait" title="この定義へのパーマリンク"></a></dt>
+<dd><p>再生終了を待ちます。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.talker.SpeakingState2.wait_2">
+<span class="sig-name descname"><span class="pre">wait_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#SpeakingState2.wait_2"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.SpeakingState2.wait_2" title="この定義へのパーマリンク"></a></dt>
+<dd><p>再生終了を待ちます。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>timeout</strong> (<em>float</em>) -- 最大待機時間。単位は秒です。
+0未満にすると無制限に待機します。</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sasawrapper.talker.StringArray2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sasawrapper.talker.</span></span><span class="sig-name descname"><span class="pre">StringArray2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">com_obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">win32com.client.CDispatch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sasawrapper/talker.html#StringArray2"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.StringArray2" title="この定義へのパーマリンク"></a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>文字列の配列を表すオブジェクト。</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.talker.StringArray2.at">
+<span class="sig-name descname"><span class="pre">at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#StringArray2.at"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.StringArray2.at" title="この定義へのパーマリンク"></a></dt>
+<dd><p>指定したインデックスの要素を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) -- 取得する要素のインデックス</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>指定したインデックスの要素</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.talker.StringArray2.duplicate">
+<span class="sig-name descname"><span class="pre">duplicate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#sasawrapper.talker.StringArray2" title="sasawrapper.talker.StringArray2"><span class="pre">sasawrapper.talker.StringArray2</span></a></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#StringArray2.duplicate"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.StringArray2.duplicate" title="この定義へのパーマリンク"></a></dt>
+<dd><p>配列を複製します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>複製された配列。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#sasawrapper.talker.StringArray2" title="sasawrapper.talker.StringArray2">StringArray2</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.StringArray2.length">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">length</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sasawrapper.talker.StringArray2.length" title="この定義へのパーマリンク"></a></dt>
+<dd><p>配列の要素数を取得します。</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sasawrapper.talker.Talker2V40">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sasawrapper.talker.</span></span><span class="sig-name descname"><span class="pre">Talker2V40</span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#Talker2V40"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.Talker2V40" title="この定義へのパーマリンク"></a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>トーク機能を提供します。</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.Talker2V40.alpha">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sasawrapper.talker.Talker2V40.alpha" title="この定義へのパーマリンク"></a></dt>
+<dd><p>声質（0～100）を取得または設定します。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.Talker2V40.available_casts">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">available_casts</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#sasawrapper.talker.StringArray2" title="sasawrapper.talker.StringArray2"><span class="pre">sasawrapper.talker.StringArray2</span></a></em><a class="headerlink" href="#sasawrapper.talker.Talker2V40.available_casts" title="この定義へのパーマリンク"></a></dt>
+<dd><p>利用可能なキャスト名を取得します。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.Talker2V40.cast">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cast</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sasawrapper.talker.Talker2V40.cast" title="この定義へのパーマリンク"></a></dt>
+<dd><p>キャストを取得または設定します。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.Talker2V40.components">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">components</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#sasawrapper.talker.TalkerComponentArray2" title="sasawrapper.talker.TalkerComponentArray2"><span class="pre">sasawrapper.talker.TalkerComponentArray2</span></a></em><a class="headerlink" href="#sasawrapper.talker.Talker2V40.components" title="この定義へのパーマリンク"></a></dt>
+<dd><p>現在のキャストの感情パラメータマップを取得します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.talker.Talker2V40.get_phonemes">
+<span class="sig-name descname"><span class="pre">get_phonemes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#sasawrapper.talker.PhonemeDataArray2" title="sasawrapper.talker.PhonemeDataArray2"><span class="pre">sasawrapper.talker.PhonemeDataArray2</span></a></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#Talker2V40.get_phonemes"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.Talker2V40.get_phonemes" title="この定義へのパーマリンク"></a></dt>
+<dd><p>指定したデータの音素単位のデータを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) -- データを取得するセリフ。</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>音素データの配列を表すオブジェクト。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#sasawrapper.talker.PhonemeDataArray2" title="sasawrapper.talker.PhonemeDataArray2">PhonemeDataArray2</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.talker.Talker2V40.get_text_duration">
+<span class="sig-name descname"><span class="pre">get_text_duration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#Talker2V40.get_text_duration"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.Talker2V40.get_text_duration" title="この定義へのパーマリンク"></a></dt>
+<dd><p>指定したセリフの長さを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) -- 長さを取得するセリフ。</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>セリフの長さ。単位は秒です。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.talker.Talker2V40.output_wave_to_file">
+<span class="sig-name descname"><span class="pre">output_wave_to_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#Talker2V40.output_wave_to_file"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.Talker2V40.output_wave_to_file" title="この定義へのパーマリンク"></a></dt>
+<dd><p>指定したセリフをWAVファイルとして出力します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em>) -- 出力するセリフ。</p></li>
+<li><p><strong>path</strong> (<em>str</em>) -- WAVファイルの出力先パス。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>出力に成功したかどうか</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+<p class="rubric">メモ</p>
+<p>出力形式はサンプリングレート48kHz、ビットレート16bit、モノラルです。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.talker.Talker2V40.speak">
+<span class="sig-name descname"><span class="pre">speak</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#sasawrapper.talker.SpeakingState2" title="sasawrapper.talker.SpeakingState2"><span class="pre">sasawrapper.talker.SpeakingState2</span></a></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#Talker2V40.speak"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.Talker2V40.speak" title="この定義へのパーマリンク"></a></dt>
+<dd><p>指定したセリフの再生を開始します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) -- 読み上げるセリフ</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>再生状態を表すオブジェクト</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#sasawrapper.talker.SpeakingState2" title="sasawrapper.talker.SpeakingState2">SpeakingState2</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.Talker2V40.speed">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">speed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sasawrapper.talker.Talker2V40.speed" title="この定義へのパーマリンク"></a></dt>
+<dd><p>話す速さ（0～100）を取得または設定します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.talker.Talker2V40.stop">
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#Talker2V40.stop"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.Talker2V40.stop" title="この定義へのパーマリンク"></a></dt>
+<dd><p>再生を停止します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>停止に成功したかどうか</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.Talker2V40.tone">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tone</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sasawrapper.talker.Talker2V40.tone" title="この定義へのパーマリンク"></a></dt>
+<dd><p>音の高さ（0～100）を取得または設定します。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.Talker2V40.tone_scale">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tone_scale</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sasawrapper.talker.Talker2V40.tone_scale" title="この定義へのパーマリンク"></a></dt>
+<dd><p>抑揚（0～100）を取得または設定します。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.Talker2V40.volume">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">volume</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sasawrapper.talker.Talker2V40.volume" title="この定義へのパーマリンク"></a></dt>
+<dd><p>音の大きさ（0～100）を取得または設定します。</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sasawrapper.talker.TalkerComponent2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sasawrapper.talker.</span></span><span class="sig-name descname"><span class="pre">TalkerComponent2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">com_obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">win32com.client.CDispatch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sasawrapper/talker.html#TalkerComponent2"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.TalkerComponent2" title="この定義へのパーマリンク"></a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>感情パラメータの単位オブジェクト。</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.TalkerComponent2.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sasawrapper.talker.TalkerComponent2.id" title="この定義へのパーマリンク"></a></dt>
+<dd><p>感情の識別子を取得します。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.TalkerComponent2.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sasawrapper.talker.TalkerComponent2.name" title="この定義へのパーマリンク"></a></dt>
+<dd><p>感情の名前を取得します。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.TalkerComponent2.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sasawrapper.talker.TalkerComponent2.value" title="この定義へのパーマリンク"></a></dt>
+<dd><p>感情の値（0～100）を取得または設定します。</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sasawrapper.talker.TalkerComponentArray2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sasawrapper.talker.</span></span><span class="sig-name descname"><span class="pre">TalkerComponentArray2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">com_obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">win32com.client.CDispatch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sasawrapper/talker.html#TalkerComponentArray2"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.TalkerComponentArray2" title="この定義へのパーマリンク"></a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>感情パラメータマップを表すオブジェクト。</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.talker.TalkerComponentArray2.at">
+<span class="sig-name descname"><span class="pre">at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#sasawrapper.talker.TalkerComponent2" title="sasawrapper.talker.TalkerComponent2"><span class="pre">sasawrapper.talker.TalkerComponent2</span></a></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#TalkerComponentArray2.at"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.TalkerComponentArray2.at" title="この定義へのパーマリンク"></a></dt>
+<dd><p>指定したインデックスの要素を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) -- 取得する要素のインデックス。</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>感情パラメータの単位オブジェクト。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#sasawrapper.talker.TalkerComponent2" title="sasawrapper.talker.TalkerComponent2">TalkerComponent2</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.talker.TalkerComponentArray2.by_name">
+<span class="sig-name descname"><span class="pre">by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#sasawrapper.talker.TalkerComponent2" title="sasawrapper.talker.TalkerComponent2"><span class="pre">sasawrapper.talker.TalkerComponent2</span></a></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#TalkerComponentArray2.by_name"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.TalkerComponentArray2.by_name" title="この定義へのパーマリンク"></a></dt>
+<dd><p>指定した名前の要素を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) -- 取得する要素の名前。</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>感情パラメータの単位オブジェクト。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#sasawrapper.talker.TalkerComponent2" title="sasawrapper.talker.TalkerComponent2">TalkerComponent2</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.talker.TalkerComponentArray2.duplicate">
+<span class="sig-name descname"><span class="pre">duplicate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#sasawrapper.talker.TalkerComponentArray2" title="sasawrapper.talker.TalkerComponentArray2"><span class="pre">sasawrapper.talker.TalkerComponentArray2</span></a></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#TalkerComponentArray2.duplicate"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.talker.TalkerComponentArray2.duplicate" title="この定義へのパーマリンク"></a></dt>
+<dd><p>配列を複製します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>複製された配列。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#sasawrapper.talker.TalkerComponentArray2" title="sasawrapper.talker.TalkerComponentArray2">TalkerComponentArray2</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.talker.TalkerComponentArray2.length">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">length</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sasawrapper.talker.TalkerComponentArray2.length" title="この定義へのパーマリンク"></a></dt>
+<dd><p>配列の要素数を取得します。</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sasawrapper.service_control.html" class="btn btn-neutral float-left" title="sasawrapper.service_control module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, takana-v.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

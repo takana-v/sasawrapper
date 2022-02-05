@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sasawrapper package &mdash; sasawrapper  ドキュメント</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="sasawrapper.sasawrapper module" href="sasawrapper.sasawrapper.html" />
+    <link rel="prev" title="Welcome to sasawrapper&#39;s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> sasawrapper
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">sasawrapper package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sasawrapper.sasawrapper.html">sasawrapper.sasawrapper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sasawrapper.service_control.html">sasawrapper.service_control module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sasawrapper.talker.html">sasawrapper.talker module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sasawrapper">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sasawrapper</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>sasawrapper package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/sasawrapper.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sasawrapper-package">
+<h1>sasawrapper package<a class="headerlink" href="#sasawrapper-package" title="このヘッドラインへのパーマリンク"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="このヘッドラインへのパーマリンク"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sasawrapper.sasawrapper.html">sasawrapper.sasawrapper module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sasawrapper.service_control.html">sasawrapper.service_control module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sasawrapper.talker.html">sasawrapper.talker module</a></li>
+</ul>
+</div>
+</section>
+<section id="module-sasawrapper">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-sasawrapper" title="このヘッドラインへのパーマリンク"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="sasawrapper.ServiceControl2V40">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sasawrapper.</span></span><span class="sig-name descname"><span class="pre">ServiceControl2V40</span></span><a class="reference internal" href="_modules/sasawrapper/service_control.html#ServiceControl2V40"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.ServiceControl2V40" title="この定義へのパーマリンク"></a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>CeVIO AIの制御機能を提供します。</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.ServiceControl2V40.close_host">
+<span class="sig-name descname"><span class="pre">close_host</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/sasawrapper/service_control.html#ServiceControl2V40.close_host"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.ServiceControl2V40.close_host" title="この定義へのパーマリンク"></a></dt>
+<dd><p>CeVIO AIに終了を要求します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>mode</strong> (<em>int</em>) -- 処理モード。
+* 0: CeVIO AIが編集中の場合、保存や終了キャンセルが可能。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.ServiceControl2V40.host_version">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">host_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sasawrapper.ServiceControl2V40.host_version" title="この定義へのパーマリンク"></a></dt>
+<dd><p>CeVIO AIのバージョンを取得します。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.ServiceControl2V40.interface_version">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interface_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sasawrapper.ServiceControl2V40.interface_version" title="この定義へのパーマリンク"></a></dt>
+<dd><p>外部連携インターフェイスのバージョンを取得します。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.ServiceControl2V40.is_host_started">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_host_started</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#sasawrapper.ServiceControl2V40.is_host_started" title="この定義へのパーマリンク"></a></dt>
+<dd><p>CeVIO AIにアクセス可能かどうかを取得します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.ServiceControl2V40.start_host">
+<span class="sig-name descname"><span class="pre">start_host</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">no_wait</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/sasawrapper/service_control.html#ServiceControl2V40.start_host"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.ServiceControl2V40.start_host" title="この定義へのパーマリンク"></a></dt>
+<dd><p>CeVIO AIを起動します。起動済みなら何もしません。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>no_wait</strong> (<em>bool</em>) -- Trueの場合、起動のみ行います。
+アクセス可能かどうかはis_host_startedで確認します。
+Falseの場合、起動後に外部からアクセス可能になるまで制御を戻しません。</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>0: 成功または起動済みです。</p></li>
+<li><p>-1: インストール状態が不明です。</p></li>
+<li><p>-2: 実行ファイルが見つかりませんでした。</p></li>
+<li><p>-3: プロセスの起動に失敗しました。</p></li>
+<li><p>-4: アプリケーション起動後、エラーにより終了しました。</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sasawrapper.Talker2V40">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sasawrapper.</span></span><span class="sig-name descname"><span class="pre">Talker2V40</span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#Talker2V40"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.Talker2V40" title="この定義へのパーマリンク"></a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>トーク機能を提供します。</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.Talker2V40.alpha">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sasawrapper.Talker2V40.alpha" title="この定義へのパーマリンク"></a></dt>
+<dd><p>声質（0～100）を取得または設定します。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.Talker2V40.available_casts">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">available_casts</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="sasawrapper.talker.html#sasawrapper.talker.StringArray2" title="sasawrapper.talker.StringArray2"><span class="pre">sasawrapper.talker.StringArray2</span></a></em><a class="headerlink" href="#sasawrapper.Talker2V40.available_casts" title="この定義へのパーマリンク"></a></dt>
+<dd><p>利用可能なキャスト名を取得します。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.Talker2V40.cast">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cast</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sasawrapper.Talker2V40.cast" title="この定義へのパーマリンク"></a></dt>
+<dd><p>キャストを取得または設定します。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.Talker2V40.components">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">components</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="sasawrapper.talker.html#sasawrapper.talker.TalkerComponentArray2" title="sasawrapper.talker.TalkerComponentArray2"><span class="pre">sasawrapper.talker.TalkerComponentArray2</span></a></em><a class="headerlink" href="#sasawrapper.Talker2V40.components" title="この定義へのパーマリンク"></a></dt>
+<dd><p>現在のキャストの感情パラメータマップを取得します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.Talker2V40.get_phonemes">
+<span class="sig-name descname"><span class="pre">get_phonemes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="sasawrapper.talker.html#sasawrapper.talker.PhonemeDataArray2" title="sasawrapper.talker.PhonemeDataArray2"><span class="pre">sasawrapper.talker.PhonemeDataArray2</span></a></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#Talker2V40.get_phonemes"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.Talker2V40.get_phonemes" title="この定義へのパーマリンク"></a></dt>
+<dd><p>指定したデータの音素単位のデータを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) -- データを取得するセリフ。</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>音素データの配列を表すオブジェクト。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="sasawrapper.talker.html#sasawrapper.talker.PhonemeDataArray2" title="sasawrapper.talker.PhonemeDataArray2">PhonemeDataArray2</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.Talker2V40.get_text_duration">
+<span class="sig-name descname"><span class="pre">get_text_duration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#Talker2V40.get_text_duration"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.Talker2V40.get_text_duration" title="この定義へのパーマリンク"></a></dt>
+<dd><p>指定したセリフの長さを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) -- 長さを取得するセリフ。</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>セリフの長さ。単位は秒です。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.Talker2V40.output_wave_to_file">
+<span class="sig-name descname"><span class="pre">output_wave_to_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#Talker2V40.output_wave_to_file"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.Talker2V40.output_wave_to_file" title="この定義へのパーマリンク"></a></dt>
+<dd><p>指定したセリフをWAVファイルとして出力します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em>) -- 出力するセリフ。</p></li>
+<li><p><strong>path</strong> (<em>str</em>) -- WAVファイルの出力先パス。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>出力に成功したかどうか</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+<p class="rubric">メモ</p>
+<p>出力形式はサンプリングレート48kHz、ビットレート16bit、モノラルです。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.Talker2V40.speak">
+<span class="sig-name descname"><span class="pre">speak</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="sasawrapper.talker.html#sasawrapper.talker.SpeakingState2" title="sasawrapper.talker.SpeakingState2"><span class="pre">sasawrapper.talker.SpeakingState2</span></a></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#Talker2V40.speak"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.Talker2V40.speak" title="この定義へのパーマリンク"></a></dt>
+<dd><p>指定したセリフの再生を開始します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) -- 読み上げるセリフ</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>再生状態を表すオブジェクト</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="sasawrapper.talker.html#sasawrapper.talker.SpeakingState2" title="sasawrapper.talker.SpeakingState2">SpeakingState2</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.Talker2V40.speed">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">speed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sasawrapper.Talker2V40.speed" title="この定義へのパーマリンク"></a></dt>
+<dd><p>話す速さ（0～100）を取得または設定します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sasawrapper.Talker2V40.stop">
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/sasawrapper/talker.html#Talker2V40.stop"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.Talker2V40.stop" title="この定義へのパーマリンク"></a></dt>
+<dd><p>再生を停止します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>停止に成功したかどうか</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.Talker2V40.tone">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tone</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sasawrapper.Talker2V40.tone" title="この定義へのパーマリンク"></a></dt>
+<dd><p>音の高さ（0～100）を取得または設定します。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.Talker2V40.tone_scale">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tone_scale</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sasawrapper.Talker2V40.tone_scale" title="この定義へのパーマリンク"></a></dt>
+<dd><p>抑揚（0～100）を取得または設定します。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sasawrapper.Talker2V40.volume">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">volume</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sasawrapper.Talker2V40.volume" title="この定義へのパーマリンク"></a></dt>
+<dd><p>音の大きさ（0～100）を取得または設定します。</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sasawrapper.cast_info">
+<span class="sig-prename descclassname"><span class="pre">sasawrapper.</span></span><span class="sig-name descname"><span class="pre">cast_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/sasawrapper/sasawrapper.html#cast_info"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.cast_info" title="この定義へのパーマリンク"></a></dt>
+<dd><p>キャストの情報を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p><strong>cast_info</strong> -- キーがキャスト名、値が感情のリストである辞書です。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_cast_info</span><span class="p">()</span>
+<span class="go">{&#39;さとうささら&#39;: [&#39;元気&#39;, &#39;普通&#39;, &#39;怒り&#39;, &#39;哀しみ&#39;]}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sasawrapper.cevioai_version">
+<span class="sig-prename descclassname"><span class="pre">sasawrapper.</span></span><span class="sig-name descname"><span class="pre">cevioai_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/sasawrapper/sasawrapper.html#cevioai_version"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.cevioai_version" title="この定義へのパーマリンク"></a></dt>
+<dd><p>CeVIO AIのバージョンを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>CeVIO AIのバージョン</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sasawrapper.close_cevioai">
+<span class="sig-prename descclassname"><span class="pre">sasawrapper.</span></span><span class="sig-name descname"><span class="pre">close_cevioai</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sasawrapper/sasawrapper.html#close_cevioai"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.close_cevioai" title="この定義へのパーマリンク"></a></dt>
+<dd><p>CeVIO AIに終了を要求します。</p>
+<p class="rubric">メモ</p>
+<p>CeVIO AIが編集中の場合、保存や終了キャンセルが可能です。</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sasawrapper.interface_version">
+<span class="sig-prename descclassname"><span class="pre">sasawrapper.</span></span><span class="sig-name descname"><span class="pre">interface_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/sasawrapper/sasawrapper.html#interface_version"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.interface_version" title="この定義へのパーマリンク"></a></dt>
+<dd><p>CeVIO AI 外部連携インターフェイスのバージョンを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>CeVIO AI 外部連携インターフェイスのバージョン</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sasawrapper.output_to_wav">
+<span class="sig-prename descclassname"><span class="pre">sasawrapper.</span></span><span class="sig-name descname"><span class="pre">output_to_wav</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volume</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tone_scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cast</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">emotion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/sasawrapper/sasawrapper.html#output_to_wav"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.output_to_wav" title="この定義へのパーマリンク"></a></dt>
+<dd><p>指定したパスにWAVファイルとして保存します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em>) -- 読み上げるテキスト（セリフ）]</p></li>
+<li><p><strong>path</strong> (<em>str</em>) -- WAVファイルの保存先のパス</p></li>
+<li><p><strong>volume</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=50</em>) -- 音の大きさ（0～100）</p></li>
+<li><p><strong>speed</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=50</em>) -- 話す速さ（0～100）</p></li>
+<li><p><strong>tone</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=50</em>) -- 音の高さ（0～100）</p></li>
+<li><p><strong>tone_scale</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=50</em>) -- 抑揚（0～100）</p></li>
+<li><p><strong>alpha</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=50</em>) -- 声質（0～100）</p></li>
+<li><p><strong>cast</strong> (<em>str</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) -- 読み上げるキャスト
+Noneの場合、available_castsの先頭が選ばれます。</p></li>
+<li><p><strong>emotion</strong> (<em>dict</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) -- キーが感情名、値が感情の値である辞書
+指定されていない感情は0にセットされます。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>出力に成功したかどうか</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sasawrapper.speak">
+<span class="sig-prename descclassname"><span class="pre">sasawrapper.</span></span><span class="sig-name descname"><span class="pre">speak</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volume</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tone_scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cast</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">emotion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sasawrapper/sasawrapper.html#speak"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.speak" title="この定義へのパーマリンク"></a></dt>
+<dd><p>指定したテキストの読み上げを行います。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em>) -- 読み上げるテキスト（セリフ）</p></li>
+<li><p><strong>volume</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=50</em>) -- 音の大きさ（0～100）</p></li>
+<li><p><strong>speed</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=50</em>) -- 話す速さ（0～100）</p></li>
+<li><p><strong>tone</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=50</em>) -- 音の高さ（0～100）</p></li>
+<li><p><strong>tone_scale</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=50</em>) -- 抑揚（0～100）</p></li>
+<li><p><strong>alpha</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=50</em>) -- 声質（0～100）</p></li>
+<li><p><strong>cast</strong> (<em>str</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) -- 読み上げるキャスト
+Noneの場合、available_castsの先頭が選ばれます。</p></li>
+<li><p><strong>emotion</strong> (<em>dict</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) -- キーが感情名、値が感情の値である辞書
+指定されていない感情は0にセットされます。</p></li>
+<li><p><strong>block</strong> (<em>bool</em><em>, </em><em>default=True</em>) -- 再生が終わるまで動作をブロックするかどうか</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sasawrapper.start_cevioai">
+<span class="sig-prename descclassname"><span class="pre">sasawrapper.</span></span><span class="sig-name descname"><span class="pre">start_cevioai</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/sasawrapper/sasawrapper.html#start_cevioai"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.start_cevioai" title="この定義へのパーマリンク"></a></dt>
+<dd><p>CeVIO AIを起動します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>block</strong> (<em>bool</em><em>, </em><em>default=True</em>) -- 起動が完了するまでブロック（待機）するかどうか</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>起動に成功したかどうか</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sasawrapper.text_duration">
+<span class="sig-prename descclassname"><span class="pre">sasawrapper.</span></span><span class="sig-name descname"><span class="pre">text_duration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volume</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tone_scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cast</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">emotion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/sasawrapper/sasawrapper.html#text_duration"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#sasawrapper.text_duration" title="この定義へのパーマリンク"></a></dt>
+<dd><p>指定したテキストの長さを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em>) -- 読み上げるテキスト（セリフ）]</p></li>
+<li><p><strong>path</strong> (<em>str</em>) -- WAVファイルの保存先のパス</p></li>
+<li><p><strong>volume</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=50</em>) -- 音の大きさ（0～100）</p></li>
+<li><p><strong>speed</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=50</em>) -- 話す速さ（0～100）</p></li>
+<li><p><strong>tone</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=50</em>) -- 音の高さ（0～100）</p></li>
+<li><p><strong>tone_scale</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=50</em>) -- 抑揚（0～100）</p></li>
+<li><p><strong>alpha</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=50</em>) -- 声質（0～100）</p></li>
+<li><p><strong>cast</strong> (<em>str</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) -- 読み上げるキャスト
+Noneの場合、available_castsの先頭が選ばれます。</p></li>
+<li><p><strong>emotion</strong> (<em>dict</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) -- キーが感情名、値が感情の値である辞書
+指定されていない感情は0にセットされます。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>テキストの長さ</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to sasawrapper&#39;s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sasawrapper.sasawrapper.html" class="btn btn-neutral float-right" title="sasawrapper.sasawrapper module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, takana-v.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
