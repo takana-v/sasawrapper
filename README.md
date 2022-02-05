@@ -13,7 +13,7 @@ https://takana-v.github.io/sasawrapper/
 ## インストール
 
 ```bash
-pip install git+https://github.com/takana-v/sasawrapper.git@releases
+pip install sasawrapper
 ```
 
 ## 使用例
