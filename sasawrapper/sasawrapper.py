@@ -21,7 +21,7 @@ def _set_values(
     alpha: int,
     cast: Optional[str],
     emotion: Optional[Dict[str, int]],
-):
+) -> None:
     _check_cevioai_status()
     _cast_info = get_cast_info()
     if cast is None:
@@ -64,7 +64,7 @@ def start_cevioai(block=True) -> bool:
     return _service_control.start_host(not block) == 0
 
 
-def close_cevioai():
+def close_cevioai() -> None:
     """
     CeVIO AIに終了を要求します。
 
@@ -139,7 +139,7 @@ def speak(
     cast: Optional[str] = None,
     emotion: Optional[Dict[str, int]] = None,
     block: bool = True,
-):
+) -> None:
     """
     指定したテキストの読み上げを行います。
 
@@ -359,7 +359,7 @@ def get_monophone_label(
     alpha: int = 50,
     cast: Optional[str] = None,
     emotion: Optional[Dict[str, int]] = None,
-):
+) -> str:
     """
     モノフォンラベルを取得します。
     リップシンク用ファイル（.lab）と同じフォーマットです。

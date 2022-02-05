@@ -3,7 +3,7 @@ import argparse
 import sasawrapper
 
 
-def speak_wrapper(args: argparse.Namespace):
+def speak_wrapper(args: argparse.Namespace) -> None:
     emotion = {}
     for emotion_list in args.emotion:
         emotion[emotion_list[0]] = int(emotion_list[1])
@@ -20,7 +20,7 @@ def speak_wrapper(args: argparse.Namespace):
     )
 
 
-def output_to_wav_wrapper(args: argparse.Namespace):
+def output_to_wav_wrapper(args: argparse.Namespace) -> None:
     emotion = {}
     for emotion_list in args.emotion:
         emotion[emotion_list[0]] = int(emotion_list[1])
@@ -39,7 +39,7 @@ def output_to_wav_wrapper(args: argparse.Namespace):
         raise RuntimeError("出力に失敗しました。")
 
 
-def text_duration_wrapper(args: argparse.Namespace) -> float:
+def text_duration_wrapper(args: argparse.Namespace) -> None:
     emotion = {}
     for emotion_list in args.emotion:
         emotion[emotion_list[0]] = int(emotion_list[1])
@@ -57,7 +57,7 @@ def text_duration_wrapper(args: argparse.Namespace) -> float:
     )
 
 
-def monophone_label_wrapper(args: argparse.Namespace):
+def monophone_label_wrapper(args: argparse.Namespace) -> None:
     emotion = {}
     for emotion_list in args.emotion:
         emotion[emotion_list[0]] = int(emotion_list[1])
@@ -75,29 +75,29 @@ def monophone_label_wrapper(args: argparse.Namespace):
     )
 
 
-def start_cevioai_wrapper(args: argparse.Namespace):
+def start_cevioai_wrapper(args: argparse.Namespace) -> None:
     res = sasawrapper.start_cevioai(not args.nonblock)
     if not res:
         raise RuntimeError("起動に失敗しました。")
 
 
-def close_cevioai_wrapper(args: argparse.Namespace):
+def close_cevioai_wrapper(args: argparse.Namespace) -> None:
     sasawrapper.close_cevioai()
 
 
-def cast_info_wrapper(args: argparse.Namespace):
+def cast_info_wrapper(args: argparse.Namespace) -> None:
     print(sasawrapper.get_cast_info())
 
 
-def cevioai_version_wrapper(args: argparse.Namespace):
+def cevioai_version_wrapper(args: argparse.Namespace) -> None:
     print(sasawrapper.get_cevioai_version())
 
 
-def interface_version_wrapper(args: argparse.Namespace):
+def interface_version_wrapper(args: argparse.Namespace) -> None:
     print(sasawrapper.get_interface_version())
 
 
-def self_version(args: argparse.Namespace):
+def self_version(args: argparse.Namespace) -> None:
     print(sasawrapper.__version__)
 
 
